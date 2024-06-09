@@ -4,12 +4,12 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <!-- <item name="colorPrimaryVariant">@color/my_light_primary_variant</item> -->
-        <item name="colorPrimaryDark"> @color/main_color</item>
+        <item name="colorPrimaryDark">@color/main_color</item>
     </style>
 
     <style name="Theme.CinemaApp2" parent="Base.Theme.CinemaApp2" />
 
-    
+
     <style name="roundedImageView">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>

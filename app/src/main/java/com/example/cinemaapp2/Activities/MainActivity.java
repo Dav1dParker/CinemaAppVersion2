@@ -1,9 +1,12 @@
 package com.example.cinemaapp2.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 import androidx.activity.EdgeToEdge;
@@ -183,5 +186,38 @@ public class MainActivity extends AppCompatActivity {
         loading=findViewById(R.id.progressBar1);
         loading2=findViewById(R.id.progressBar2);
         loading3=findViewById(R.id.progressBar3);
+        ImageButton accountBtn = findViewById(R.id.ProfileBtnM);
+        ImageButton favoriteBtn = findViewById(R.id.FavoriteBtnM);
+        ImageButton cartBtn = findViewById(R.id.CartBtnM);
+        accountBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //PosterHandler.UserName = userEdt.getText().toString();
+                Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        favoriteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //PosterHandler.UserName = userEdt.getText().toString();
+                Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //PosterHandler.UserName = userEdt.getText().toString();
+                Intent intent = new Intent(MainActivity.this, CartActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        
     }
 }
