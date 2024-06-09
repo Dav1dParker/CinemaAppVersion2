@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:focusable="true"
-    android:id="@+id/login_layout"
+    android:id="@+id/register_layout"
     android:focusableInTouchMode="true"
     android:background="@color/main_color">
 
@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView16"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/gradient_background"
@@ -39,7 +39,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/usernameR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/username"
@@ -51,7 +51,7 @@
         android:textColorHint="@color/white"/>
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -62,24 +62,25 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
-    <Button
-        android:id="@+id/login_button"
+    <EditText
+        android:id="@+id/passwordR2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:layout_marginBottom="16dp"
+        android:background="@color/dark_blue"
+        android:hint="@string/repeat_password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <Button
+        android:id="@+id/register_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
         android:padding="12dp"
         android:background="@color/orange"
         android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/registerBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="14sp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/white"
-        android:text="@string/register"
-        android:background="@color/transparent"/>
 
 </LinearLayout>
