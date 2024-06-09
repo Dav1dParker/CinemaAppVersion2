@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.cinemaapp2"
-        minSdk = 29
+        minSdk = 31
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -40,4 +40,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // viewpager2
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
+
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+
 }
