@@ -79,7 +79,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="FavoriteShow"
+                    android:text="@string/favorite_show"
                     android:textColor="@color/orange"
                     android:textSize="27sp"
 
@@ -89,7 +89,9 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Movies TV-shows ratings actors"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/enter_btn"
