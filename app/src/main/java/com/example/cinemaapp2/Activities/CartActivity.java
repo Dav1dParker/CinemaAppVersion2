@@ -3,6 +3,8 @@ package com.example.cinemaapp2.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.cinemaapp2.Adapters.CartItemsAdapter;
+import com.example.cinemaapp2.Adapters.FilmListAdapter;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.activity.EdgeToEdge;
@@ -10,14 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cinemaapp2.databinding.ActivityCartBinding;
 
@@ -57,5 +58,17 @@ public class CartActivity extends AppCompatActivity {
             startActivity(new Intent(CartActivity.this, FavoritesActivity.class));
             finish();
         });
+
+
+        ProgressBar loading;
+        RecyclerView recyclerViewCartItems = findViewById(R.id.recyclerViewCartItems);
+        recyclerViewCartItems.setLayoutManager(new LinearLayoutManager(this));
+        int[] cartItems = {R.drawable.wide, R.drawable.wide1, R.drawable.wide3}; // Replace with actual drawable resource IDs
+        CartItemsAdapter adapter = new CartItemsAdapter(this, cartItems);
+        recyclerViewCartItems.setAdapter(adapter);
+        loading=findViewById(R.id.progressBarCart);
+        loading.setVisibility(View.GONE);
+
+
     }
 }
